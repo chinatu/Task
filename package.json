@@ -1,0 +1,12 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "testII": "npx cypress run --headless"
+  },
+  "author": "",
+  "license": "ISC"
+}
