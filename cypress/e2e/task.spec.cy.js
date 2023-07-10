@@ -23,4 +23,9 @@ describe('Accessing URL and Checking Status Codes', () => {
     // Assertion: Verify the status code of another link
     statusCodesPage.getStatusLinkByCode('500').should('have.attr', 'href', 'status_codes/500')
   })
+
+  it("Verify that user is able to select Status Code for Redirection", () => {
+    statusCodesPage.getStatusLinkByCode('301').click()
+    statusCodesPage.get301CodeText().should('include.text','This page returned a 301 status code')
+  })
 })
